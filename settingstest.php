@@ -15,10 +15,7 @@ switch ($_SERVER['argv'][3]) {
          * from settings form
          */
         craft()->plugins->savePluginSettings($settingsTestPlugin, [
-            'dateTime' => [
-                'date' => '1/11/2017',
-                'time' => '12:00 AM'
-            ]
+            'dateTime' => new DateTime()
         ]);
         break;
     case 'load':
